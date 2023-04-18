@@ -18,7 +18,7 @@ module.exports = app => {
       quantidade,
     } = req.params;
     var tot = quantidade ?? 10;
-    //console.log('q: ', quantidade);
+    
     for (let i = 0; i < tot; i++) {
       ipvaMock.data.push({
         id: uuidv4(),
@@ -29,7 +29,7 @@ module.exports = app => {
       });
     }
    
-    res.status(201).json(quantidade);
+    res.status(201).json(ipvaMock);
   };
 
   controller.saveIpva = (req, res) => {
